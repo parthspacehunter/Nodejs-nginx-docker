@@ -19,10 +19,10 @@ services:
                         - ./nginx/error.log:/etc/nginx/error_log.log
                         - ./certbot/conf:/etc/letsencrypt
                         - ./certbot/www:/var/www/certbot
-        # certbot:
-        #         container_name: certbot
-        #         image: certbot/certbot
-        #         volumes: 
-        #                 - ./certbot/conf:/etc/letsencrypt
-        #                 - ./certbot/www:/var/www/certbot
-        #         command: certonly --webroot -w /var/www/certbot --force-renewal --email parthramnathpur0546@gmail.com - d thesemicolonstudio.com --agree-tos
+        certbot:
+                container_name: certbot
+                image: certbot/certbot
+                volumes: 
+                        - ./certbot/conf:/etc/letsencrypt
+                        - ./certbot/www:/var/www/certbot
+                command: certonly --webroot -w /var/www/certbot --force-renewal --email parthramnathpur0546@gmail.com - d tradekit.pro --agree-tos
